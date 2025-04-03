@@ -1,5 +1,5 @@
 import { Pressable, Text, View } from "react-native";
-import { CheckCircle, CircleDashed, Trash } from "phosphor-react-native";
+import { FontAwesome6 } from "@expo/vector-icons";
 import { IListBuy } from "@/src/dtos/IListBuy";
 import { colors } from "@/src/styles/colors";
 
@@ -17,8 +17,8 @@ export function ItemList({ item, onRemove, onToggle}: Props) {
         onPress={onToggle}
       >
         {item.isCompleted
-          ? <CheckCircle size={24} color={colors.accent} />
-          : <CircleDashed size={24} color="black" />
+          ? <FontAwesome6 name="square-check" size={24} color={colors.accent} />
+          : <FontAwesome6 name="square" size={24} color="black" />
         }
         <Text className="font-bold text-lg">
           {item.title}
@@ -28,7 +28,7 @@ export function ItemList({ item, onRemove, onToggle}: Props) {
       <Pressable
         onPress={onRemove}
       >
-        <Trash size={24} color="#EF4444" />
+        <FontAwesome6 name="trash-alt" size={24} color="#EF4444" />
       </Pressable>
     </View>
   )

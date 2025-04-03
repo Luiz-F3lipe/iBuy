@@ -81,12 +81,12 @@ export default function Index() {
         <View className="flex-row gap-2">
         {
           listFilterButton.map((item) => (
-          <FilterButton
-            key={item.id}
-            variant={item.variant}
-            isSelected={idFilterSelected === item.id}
-            onPress={() => setIdFilterSelected(item.id)}
-          />
+            <FilterButton
+              key={item.id}
+              variant={item.variant}
+              isSelected={idFilterSelected === item.id}
+              onPress={() => setIdFilterSelected(item.id)}
+            />
           ))
         }
         </View>
